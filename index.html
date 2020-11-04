@@ -253,7 +253,7 @@
       behemothTracks.forEach(behemothTrack => {
         behemothDiv.innerHTML += returnCard(behemothTrack)
       })
-
+      // ALTERNATIVE VERSION
       // for (let i = 0; i < eminemTracks.length; i++) {
       //   eminemDiv.innerHTML += returnCard(eminemTracks[i]);
       // }
@@ -286,9 +286,6 @@
             found.forEach(track => {
               searchSection.innerHTML += returnCard(track);
             });
-            // for (let i = 0; i < found.length; i++) {
-            //   searchSection.innerHTML += returnCard(found[i]);
-            // }
           }
         })
     }
@@ -316,7 +313,7 @@
             albumId, i, array) => array.indexOf(
             albumId) ===
           i)
-      // .reduce((sum, elem) => sum + 1, 0) // Meglio usare la .length xD
+      // .reduce((sum, elem) => sum + 1, 0) // Just an example...better use .length :)
       console.log(uniqueAlbumCount)
 
       alert(`${uniqueAlbumCount.length} unique albums`);
@@ -371,6 +368,7 @@
       //     behemothTracks = artists.data.slice(0, 8))
       //   .catch(error =>  console.log(error));
 
+      // ALTERNATIVE WITH PROMISE ALL
       const fetchEminem = fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
           method: "GET",
           headers,
